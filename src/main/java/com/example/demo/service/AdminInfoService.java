@@ -2,6 +2,8 @@ package com.example.demo.service;
 
 import com.example.demo.model.AdminInfo;
 
+import java.util.List;
+
 public interface AdminInfoService {
-    AdminInfo selectByPhone(String phone);
+    List<AdminInfo> selectByPhone(String phone);
 }

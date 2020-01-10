@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping("adminInfo")
@@ -17,8 +18,8 @@ public class AdminInfoController {
     private AdminInfoService adminInfoService;
 
     @RequestMapping("/selectByPhone")
-    public RetResult<AdminInfo> selectByPhone(@RequestParam(defaultValue = "") String phone) {
-        AdminInfo adminInfo = adminInfoService.selectByPhone(phone);
+    public RetResult<List<AdminInfo>> selectByPhone(@RequestParam(defaultValue = "") String phone) {
+        List<AdminInfo> adminInfo = adminInfoService.selectByPhone(phone);
         return RetResponse.makeOKRsp(adminInfo);
     }
 }

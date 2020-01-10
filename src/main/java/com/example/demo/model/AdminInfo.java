@@ -1,11 +1,25 @@
 package com.example.demo.model;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+
 public class AdminInfo {
+    @Id
     private Integer id;
+
+    @Column(name = "user_name")
     private String userName;
+
+    @Column(name = "phone")
     private String phone;
+
+    @Column(name = "sex")
     private Integer sex;
+
+    @Column(name = "create_at")
     private String createAt;
+
+    @Column(name = "update_at")
     private String updateAt;
 
     public Integer getId() {
